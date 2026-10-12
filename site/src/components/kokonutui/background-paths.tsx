@@ -144,14 +144,10 @@ export const FloatingPaths = memo(function FloatingPaths({
   );
 
   // Shared animation configuration
-  const sharedAnimationProps = {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      opacity: { duration: 1 },
-      scale: { duration: 1 },
-    },
-  };
+  // Vestex: paths are drawn static at their designed opacity and each wave
+  // group drifts as one layer. The original faded every path to full
+  // opacity and moved all ~37 separately, which flashed on load and
+  // repainted heavily. The drift is a CSS animation (see globals.css).
 
   return (
     <div className={className}>
@@ -170,84 +166,36 @@ export const FloatingPaths = memo(function FloatingPaths({
           </linearGradient>
         </defs>
 
-        <g className="primary-waves">
+        <g className="primary-waves waves-drift" style={{ animationDuration: "12s" }}>
           {primaryPaths.map((path) => (
-            <motion.path
-              animate={{
-                ...sharedAnimationProps,
-                y: [0, -15, 0],
-              }}
-              d={path.d}
-              initial={{ opacity: 0, scale: 0.8 }}
+            <path d={path.d}
               key={path.id}
               stroke={`url(#${gradientId})`}
               strokeLinecap="round"
               strokeWidth={path.width}
-              style={{ opacity: path.opacity }}
-              transition={{
-                ...sharedAnimationProps.transition,
-                y: {
-                  duration: 8,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  repeatType: "reverse",
-                },
-              }}
-            />
+              style={{ opacity: path.opacity }} />
           ))}
         </g>
 
-        <g className="secondary-waves" style={{ opacity: 0.8 }}>
+        <g className="secondary-waves waves-drift" style={{ opacity: 0.8, animationDuration: "9s" }}>
           {secondaryPaths.map((path) => (
-            <motion.path
-              animate={{
-                ...sharedAnimationProps,
-                y: [0, -10, 0],
-              }}
-              d={path.d}
-              initial={{ opacity: 0, scale: 0.9 }}
+            <path d={path.d}
               key={path.id}
               stroke={`url(#${gradientId})`}
               strokeLinecap="round"
               strokeWidth={path.width}
-              style={{ opacity: path.opacity }}
-              transition={{
-                ...sharedAnimationProps.transition,
-                y: {
-                  duration: 6,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  repeatType: "reverse",
-                },
-              }}
-            />
+              style={{ opacity: path.opacity }} />
           ))}
         </g>
 
-        <g className="accent-waves" style={{ opacity: 0.6 }}>
+        <g className="accent-waves waves-drift" style={{ opacity: 0.6, animationDuration: "7s" }}>
           {accentPaths.map((path) => (
-            <motion.path
-              animate={{
-                ...sharedAnimationProps,
-                y: [0, -5, 0],
-              }}
-              d={path.d}
-              initial={{ opacity: 0, scale: 0.95 }}
+            <path d={path.d}
               key={path.id}
               stroke={`url(#${gradientId})`}
               strokeLinecap="round"
               strokeWidth={path.width}
-              style={{ opacity: path.opacity }}
-              transition={{
-                ...sharedAnimationProps.transition,
-                y: {
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  repeatType: "reverse",
-                },
-              }}
-            />
+              style={{ opacity: path.opacity }} />
           ))}
         </g>
       </svg>

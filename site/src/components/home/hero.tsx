@@ -2,14 +2,7 @@
 
 import { motion } from "motion/react";
 import { FloatingPaths } from "@/components/kokonutui/background-paths";
-import { WordReveal } from "@/components/motion/reveal";
 import { Phone } from "./phone";
-
-const fade = (delay: number) => ({
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const, delay },
-});
 
 export function Hero() {
   return (
@@ -22,25 +15,17 @@ export function Hero() {
       <div className="absolute left-1/2 top-[-20%] -z-10 h-[620px] w-[920px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(232,180,74,0.16),transparent)]" aria-hidden />
 
       <div className="wrap grid items-center gap-14 pb-24 pt-14 md:grid-cols-[1.15fr_0.85fr] md:pt-20">
-        <div>
-          <motion.p className="eyebrow mb-5" {...fade(0)}>Stock market simulation · iPhone</motion.p>
+        <div className="hero-in">
+          <p className="eyebrow mb-5">Stock market simulation · iPhone</p>
           <h1 className="display text-[clamp(44px,7vw,84px)] font-extrabold leading-[0.98]">
-            <WordReveal text="Learn to invest." className="block" />
-            {/* Its own element: a clipped gradient doesn't reach transformed child spans. */}
-            <motion.span
-              className="block bg-gradient-to-r from-[#f6d58a] via-gold to-[#c98f1e] bg-clip-text pb-2 text-transparent"
-              initial={{ opacity: 0, y: "0.3em", filter: "blur(6px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
-            >
-              Risk-free.
-            </motion.span>
+            <span className="block">Learn to invest.</span>
+            <span className="block bg-gradient-to-r from-[#f6d58a] via-gold to-[#c98f1e] bg-clip-text pb-2 text-transparent">Risk-free.</span>
           </h1>
-          <motion.p className="mt-7 max-w-[46ch] text-lg leading-relaxed text-ink-soft" {...fade(0.5)}>
+          <p className="mt-7 max-w-[46ch] text-lg leading-relaxed text-ink-soft">
             Trade 99 stocks and ETFs in a realistic simulation with $10,000 in practice money. Learn as you go, then climb the
             leaderboard against five AI traders.
-          </motion.p>
-          <motion.div className="mt-9 flex flex-wrap items-center gap-4" {...fade(0.7)}>
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
             <span className="relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-6 py-3.5 font-semibold text-[#0e1a33]">
               <AppleLogo />
               Coming soon to the App Store
@@ -55,12 +40,12 @@ export function Hero() {
             <a href="#features" className="group text-ink-soft transition-colors hover:text-ink">
               See what&apos;s inside <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
-          </motion.div>
-          <motion.p className="mt-5 text-sm text-ink-faint" {...fade(0.85)}>
+          </div>
+          <p className="mt-5 text-sm text-ink-faint">
             Free. No ads. No real money, no real trading.
-          </motion.p>
+          </p>
         </div>
-        <div className="mx-auto w-[min(300px,76vw)]">
+        <div className="hero-in-late mx-auto w-[min(300px,76vw)]">
           <Phone />
         </div>
       </div>

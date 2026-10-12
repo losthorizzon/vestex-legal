@@ -1,8 +1,8 @@
-:HL["/vestex-legal/_next/static/chunks/19hqnm0o86ye8.css","style"]
+:HL["/vestex-legal/_next/static/chunks/0g1lrh0899g4-.css","style"]
 :HL["/vestex-legal/_next/static/media/017d9bea37084d9b-s.p.41rroleoq1br7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vestex-legal/_next/static/media/26daee0352f50a5f-s.p.2e115y8-hourl.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vestex-legal/_next/static/media/400bf8aa837fcb7e-s.p.19g-lkcx7iw64.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vestex-legal/_next/static/media/e1750518007a189a-s.p.29e6ydd6osd72.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vestex-legal/_next/static/media/f7aa21714c1c53f8-s.p.0-95eo-012xnf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"KiMvrTfx0Q4ZDfEwIFulY","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"mzJJVXAl9RpOK_3RM6t--","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

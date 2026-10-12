@@ -2,7 +2,7 @@ import { LifeBuoy, MessageCircleQuestion, Trash2 } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Faq } from "@/components/home/sections";
-import { Reveal, WordReveal } from "@/components/motion/reveal";
+import { Reveal } from "@/components/motion/reveal";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Support" };
@@ -17,10 +17,10 @@ export default function Support() {
   return (
     <div className="wrap pt-12 md:pt-16">
       <p className="eyebrow mb-4">Help</p>
-      <WordReveal as="h1" text="How can we help?" className="display block text-[clamp(40px,6vw,68px)] font-extrabold leading-[1.02]" />
+      <h1 className="hero-in display text-[clamp(40px,6vw,68px)] font-extrabold leading-[1.02]">How can we help?</h1>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {CARDS.map((c, i) => (
-          <Reveal key={c.title} delay={i * 0.08}>
+          <div key={c.title} className="hero-in-late">
             <Link href={c.href} className="card group block h-full p-6 transition-transform hover:-translate-y-1">
               <div className="mb-5 grid h-11 w-11 place-items-center rounded-xl bg-navy text-gold ring-1 ring-gold/20">
                 <c.icon className="h-5 w-5" aria-hidden />
@@ -31,7 +31,7 @@ export default function Support() {
                 {c.cta} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
               </p>
             </Link>
-          </Reveal>
+          </div>
         ))}
       </div>
       <h2 className="display mb-8 mt-20 text-3xl font-bold">Frequently asked</h2>

@@ -24,12 +24,7 @@ export function Phone({ className = "" }: { className?: string }) {
   }, [reduce]);
 
   return (
-    <motion.div
-      className={`relative ${className}`}
-      initial={{ opacity: 0, y: 40, rotate: -4 }}
-      animate={{ opacity: 1, y: 0, rotate: 0 }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-    >
+    <div className={`relative ${className}`}>
       <motion.div
         animate={reduce ? undefined : { y: [0, -10, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -60,6 +55,6 @@ export function Phone({ className = "" }: { className?: string }) {
           />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

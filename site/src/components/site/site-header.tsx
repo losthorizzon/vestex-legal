@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,12 +23,7 @@ export function SiteHeader() {
   const path = usePathname();
 
   return (
-    <motion.header
-      initial={{ y: -24, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="sticky top-0 z-50 pt-[max(env(safe-area-inset-top),12px)]"
-    >
+    <header className="sticky top-0 z-50 pt-[max(env(safe-area-inset-top),12px)]">
       <div className="wrap">
         <nav
           aria-label="Main"
@@ -62,6 +57,6 @@ export function SiteHeader() {
           </div>
         </nav>
       </div>
-    </motion.header>
+    </header>
   );
 }

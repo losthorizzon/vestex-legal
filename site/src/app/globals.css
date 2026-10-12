@@ -142,3 +142,16 @@
 /* Long legal text stays comfortable to read. */
 .legal-prose p { color: var(--ink-soft); line-height: 1.75; margin: 0 0 0.9em; max-width: 72ch; }
 .legal-prose h2 { scroll-margin-top: 96px; }
+
+/* Hero background lines drift slowly, as whole layers. */
+@media (prefers-reduced-motion: no-preference) {
+  .waves-drift { animation: waves-drift ease-in-out infinite alternate; will-change: transform; }
+  @keyframes waves-drift { to { transform: translateY(-18px); } }
+}
+/* The hero fades in once, as a whole, on first paint (pure CSS, so it
+   doesn't wait for JavaScript and never blinks). */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in { animation: hero-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .hero-in-late { animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both; }
+  @keyframes hero-in { from { opacity: 0; transform: translateY(10px); } }
+}

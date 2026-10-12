@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
-import { Reveal, WordReveal } from "@/components/motion/reveal";
+
 
 export type LegalArticle = { title: string; clauses: string[] };
 
@@ -43,11 +43,11 @@ export function LegalDoc({
   return (
     <>
       <motion.div style={{ scaleX: progress }} className="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-gold to-up" aria-hidden />
-      <div className="wrap pb-10 pt-12 md:pt-16">
+      <div className="hero-in wrap pb-10 pt-12 md:pt-16">
         <p className="eyebrow mb-4">Vestex for iPhone</p>
-        <WordReveal as="h1" text={title} className="display block text-[clamp(40px,6vw,68px)] font-extrabold leading-[1.02]" />
+        <h1 className="display text-[clamp(40px,6vw,68px)] font-extrabold leading-[1.02]">{title}</h1>
         <p className="mt-4 font-mono text-sm text-ink-faint">Effective {effective}</p>
-        <Reveal className="card mt-10 p-6 md:p-8" delay={0.2}>
+        <div className="card mt-10 p-6 md:p-8">
           <p className="eyebrow mb-4">In short</p>
           <ul className="grid gap-3 text-ink-soft md:grid-cols-2">
             {summary.map((s) => (
@@ -57,7 +57,7 @@ export function LegalDoc({
               </li>
             ))}
           </ul>
-        </Reveal>
+        </div>
       </div>
       <div className="wrap grid gap-12 md:grid-cols-[220px_minmax(0,1fr)]">
         <nav aria-label="Contents" className="hidden md:block">
@@ -82,7 +82,7 @@ export function LegalDoc({
         </nav>
         <article className="legal-prose min-w-0">
           {all.map((a, i) => (
-            <Reveal key={a.title} as="section" className="border-t border-rule py-8 first:border-t-0 first:pt-0">
+            <section key={a.title} className="border-t border-rule py-8 first:border-t-0 first:pt-0">
               <h2 id={slug(a.title)} className="display mb-4 text-2xl font-bold">
                 <span className="mr-3 font-mono text-base text-gold">{String(i + 1).padStart(2, "0")}</span>
                 {a.title}
@@ -90,7 +90,7 @@ export function LegalDoc({
               {a.clauses.map((c, j) => (
                 <p key={j}>{c}</p>
               ))}
-            </Reveal>
+            </section>
           ))}
         </article>
       </div>
