@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-figtree);
+  --font-display: var(--font-bricolage);
+  --font-mono: var(--font-jetbrains);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-rule: var(--rule);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-violet: var(--violet);
+  --color-border: var(--rule);
+  --color-ring: var(--gold);
+  --color-muted-foreground: var(--ink-faint);
+  --radius-lg: 0.75rem;
+  --color-muted: var(--surface-2);
+  --color-secondary: var(--surface-2);
+  --color-secondary-foreground: var(--ink);
+  --color-primary: var(--gold);
+  --color-primary-foreground: #0e1a33;
+  --color-chart-label: var(--chart-label);
+  --color-chart-tooltip-foreground: var(--chart-tooltip-foreground);
+  --color-chart-tooltip-muted: var(--chart-tooltip-muted);
+  --color-chart-tooltip-background: var(--chart-tooltip-background);
+}
+
+/* One palette, the app's: deep navy, gold accent, green for gains, violet
+   for practice mode. The site is dark-first like the app; a light theme
+   follows the visitor's system setting. */
+:root {
+  --background: #070d1c;
+  --foreground: #eef2fb;
+  --ink: #eef2fb;
+  --ink-soft: #aab6d3;
+  --ink-faint: #7886a8;
+  --surface: #0e1830;
+  --surface-2: #14213f;
+  --rule: rgba(170, 182, 211, 0.14);
+  --navy: #16264a;
+  --gold: #e8b44a;
+  --up: #2fbf71;
+  --down: #ef5350;
+  --violet: #8b6cf0;
+
+  --chart-background: transparent;
+  --chart-foreground: var(--ink);
+  --chart-foreground-muted: var(--ink-faint);
+  --chart-label: var(--ink-faint);
+  --chart-grid: rgba(170, 182, 211, 0.12);
+  --chart-line-primary: var(--up);
+  --chart-line-secondary: var(--ink-faint);
+  --chart-crosshair: var(--ink-faint);
+  --chart-brush-border: var(--rule);
+  --chart-tooltip-background: rgba(14, 24, 48, 0.94);
+  --chart-tooltip-foreground: #ffffff;
+  --chart-tooltip-muted: rgba(255, 255, 255, 0.7);
+  --chart-marker-background: var(--surface);
+  --chart-marker-border: var(--rule);
+  --chart-marker-foreground: var(--ink);
+  --chart-1: var(--up);
+  --chart-2: var(--gold);
+  --chart-3: var(--violet);
+  --chart-4: #4d8cf5;
+  --chart-5: var(--ink-faint);
+  --muted-foreground: var(--ink-faint);
+  --foreground-muted: var(--ink-soft);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f5f6fa;
+    --foreground: #0e1a33;
+    --ink: #0e1a33;
+    --ink-soft: #4a5673;
+    --ink-faint: #6b7694;
+    --surface: #ffffff;
+    --surface-2: #eaeef7;
+    --rule: rgba(14, 26, 51, 0.1);
+    --up: #1c9a57;
+    --chart-grid: rgba(14, 26, 51, 0.08);
+    --chart-tooltip-background: rgba(14, 26, 51, 0.92);
+    color-scheme: light;
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    overflow-x: clip;
+    background: var(--background);
+    color: var(--ink);
+    font-family: var(--font-sans), -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: color-mix(in srgb, var(--gold) 40%, transparent); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+  button { cursor: pointer; }
+}
+
+@layer utilities {
+  .wrap { margin-inline: auto; max-width: 1140px; padding-inline: 20px; }
+  .eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .display { font-family: var(--font-display), "Avenir Next", system-ui, sans-serif; letter-spacing: -0.02em; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .card {
+    background: color-mix(in srgb, var(--surface) 86%, transparent);
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at 50% 30%, #000 25%, transparent 70%);
+  }
+}
+
+/* Long legal text stays comfortable to read. */
+.legal-prose p { color: var(--ink-soft); line-height: 1.75; margin: 0 0 0.9em; max-width: 72ch; }
+.legal-prose h2 { scroll-margin-top: 96px; }

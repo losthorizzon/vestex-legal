@@ -1,0 +1,236 @@
+{
+  "privacy": {
+    "effective": "12 October 2026",
+    "articles": [
+      {
+        "title": "Introduction and Scope",
+        "clauses": [
+          "This Privacy Policy (the \"Policy\") explains how Vestex (the \"Application\") handles information. The Application is an educational simulation of securities trading. It does not execute real transactions and does not hold, transfer or manage real money. Results are hypothetical.",
+          "By using the Application you acknowledge that you have read this Policy. If you do not agree with it, you should stop using the Application."
+        ]
+      },
+      {
+        "title": "Information We Collect",
+        "clauses": [
+          "The developer operates no servers and does not collect, receive or have access to your personal information. Signing in is optional. If you sign in with Apple, the Application receives your name and an Apple user identifier from Apple (it does not request your email address) and keeps them on your device. The Application contains no registration form.",
+          "The Application contains no third-party advertising or analytics software and does not collect device identifiers, advertising identifiers, location data, contacts, photographs or usage analytics."
+        ]
+      },
+      {
+        "title": "Information Stored on Your Device",
+        "clauses": [
+          "Your simulated portfolio, orders, transaction history, watchlist, price alerts, achievements, lesson progress, season records, practice-mode state and preferences are stored on your device in the Application's local storage.",
+          "To protect the integrity of the simulation, the Application also stores in your device's Keychain a backup copy of the portfolio, a randomly generated key used to sign saved data, and clock data (the last time confirmed by Apple's servers and the latest time observed). The signing key syncs through iCloud Keychain when it is turned on, so your other devices can check your saved data. The backup copy and clock data stay on this device. None of these items contain personal information.",
+          "To measure elapsed time, the Application reads the device's system boot time. It is used only on your device and is not transmitted.",
+          "Home Screen and Lock Screen widgets show a small snapshot of your simulated portfolio and watchlist. The snapshot is saved in an App Group container that only the Application and its widgets on your device can read.",
+          "This information is not transmitted to the developer or to any server operated by the developer. Apart from the optional iCloud backup and Game Center described below, it does not leave your device."
+        ]
+      },
+      {
+        "title": "Sign in with Apple and iCloud Backup",
+        "clauses": [
+          "Sign in with Apple is optional. When you use it, Apple provides the Application with your name and a user identifier. The Application stores them on your device (in local storage and the Keychain) to show your name and to recognise your account. It does not request your email address. Sign in with Apple is governed by Apple's privacy policy.",
+          "When you are signed in, the Application backs up your saved portfolio data to your iCloud account. The backup is a sealed (encrypted) copy stored in your own private CloudKit database, which only you can access with your Apple ID. The developer cannot read it. It is stored and processed by Apple under Apple's privacy policy.",
+          "Delete Account & Data also removes this iCloud copy."
+        ]
+      },
+      {
+        "title": "Game Center",
+        "clauses": [
+          "The Application uses Apple Game Center for a leaderboard. Game Center is optional. When you are signed in to Game Center, the Application submits the percentage return of your simulated portfolio since it started or was last reset as a score, together with your rating tier in the score's context, and shows your Game Center alias and photo. Your alias, score and rating tier are visible to other players on the leaderboard. Practice-mode results are never submitted.",
+          "The Application allows one portfolio per Game Center player. If you use Delete Account & Data and then start a new portfolio, the new portfolio's scores are held back from the global leaderboard until the 6-month reset date of your previous portfolio. To apply this rule, the Application stores your portfolio's start date and your rating in the Game Center score's context, together with the score.",
+          "The leaderboard also shows five computer-run AI traders. They are simulated, labelled as AI, generated on your device, are not real persons, and involve no personal information.",
+          "Game Center is provided and operated by Apple Inc. and is governed by Apple's own privacy policy. The developer does not receive your Apple ID or any other Game Center account information. Scores already submitted are retained by Apple and are not removed by Delete Account & Data."
+        ]
+      },
+      {
+        "title": "Trade Coach",
+        "clauses": [
+          "The Trade Coach reviews your simulated trades using rules that run on your device. On devices that support Apple Intelligence, the Application may use Apple's on-device language model to rephrase its tips. This processing takes place on your device; no trade data or tip text is sent to the developer or to any third party. You can turn the Trade Coach off in Settings."
+        ]
+      },
+      {
+        "title": "Sharing",
+        "clauses": [
+          "The Application can create share cards (images of simulated results) and an App Store link. They are created on your device and shared only when you choose to share them, through the iOS share sheet, with the app and recipient you select. The developer does not receive them. Once shared, they are subject to the policies of the recipient or service you choose."
+        ]
+      },
+      {
+        "title": "Notifications",
+        "clauses": [
+          "If you create a price alert, place a limit or stop order, or turn on a reminder, the Application asks for permission to display notifications. Notifications, including order alerts, market reminders and streak reminders, are scheduled locally on your device and involve no remote server. You can turn each kind off in the Application's settings or withdraw permission at any time in your device's Settings."
+        ]
+      },
+      {
+        "title": "Market Data",
+        "clauses": [
+          "Prices shown in the Application replay historical market data as if it were happening now. The data and the company logos are bundled with the Application, and prices are calculated on your device. They are not live quotes. The Application does not download market data and does not transmit any information in order to show it.",
+          "To keep the market the same for every player and to prevent clock tampering, the Application reads the date from the HTTP response header of a request to www.apple.com when it opens, or to www.google.com if Apple's server cannot be reached. The request contains no personal information, and the time it returns is kept only on your device. As with any internet request, Apple or Google may see your IP address, subject to their privacy policies."
+        ]
+      },
+      {
+        "title": "Photographs and Third-Party Content",
+        "clauses": [
+          "The Application includes a photograph provided by Pexels (www.pexels.com) and used under the Pexels License. The photograph is bundled with the Application. Displaying it does not contact Pexels or any other server, and no information about you is shared with Pexels or with the photographer."
+        ]
+      },
+      {
+        "title": "Disclosure to Third Parties",
+        "clauses": [
+          "Because the developer receives no personal information, none is sold, rented, licensed or otherwise disclosed to third parties. The developer does not engage in the sale or sharing of personal information as those terms are defined under the California Consumer Privacy Act."
+        ]
+      },
+      {
+        "title": "Retention and Deletion",
+        "clauses": [
+          "Your data is retained on your device until you reset your portfolio, which the Application allows every six months, or delete it. Your iCloud backup is kept in your iCloud account until you delete it or use Delete Account & Data. Keychain items may remain after the Application is deleted, so that your portfolio is restored if you reinstall it on the same device.",
+          "Settings > Delete Account & Data permanently deletes all data the Application stores on your device, including the portfolio, history, watchlist, alerts, achievements, lesson progress, season and practice data, settings, your saved name and Apple user identifier, widget snapshot, scheduled notifications and all Keychain items (backup, integrity key and clock data), and removes your iCloud backup. It returns the Application to its initial state. Scores already submitted to Game Center remain with Apple and are retained under Apple's policies."
+        ]
+      },
+      {
+        "title": "Your Rights",
+        "clauses": [
+          "Depending on your jurisdiction, including under the General Data Protection Regulation and the California Consumer Privacy Act, you may have rights of access, rectification, erasure, restriction, portability and objection in relation to personal information held about you. Because the developer holds no such information, these rights are satisfied by the design of the Application. Requests relating to Game Center, Sign in with Apple or iCloud data should be directed to Apple."
+        ]
+      },
+      {
+        "title": "Children",
+        "clauses": [
+          "The Application is not directed at children under the age of 13 and does not knowingly collect personal information from any person. Because no personal information is collected, the Application does not require verifiable parental consent under the Children's Online Privacy Protection Act."
+        ]
+      },
+      {
+        "title": "Security",
+        "clauses": [
+          "Locally stored information is protected by the security measures of your device and operating system. The iCloud backup is sealed (encrypted) before it is stored in your private CloudKit database. You are responsible for maintaining the security of your device and Apple ID."
+        ]
+      },
+      {
+        "title": "Changes to This Policy",
+        "clauses": [
+          "The developer may amend this Policy from time to time. The date of the most recent revision is stated at the head of this document. Continued use of the Application after a revision takes effect constitutes acceptance of the revised Policy."
+        ]
+      },
+      {
+        "title": "Contact",
+        "clauses": [
+          "Questions concerning this Policy may be sent to the support contact published on the Application's page in the App Store."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "effective": "12 October 2026",
+    "articles": [
+      {
+        "title": "Agreement to These Terms",
+        "clauses": [
+          "These Terms of Service (the \"Terms\") form a binding agreement between you and the developer of Vestex (the \"Application\"). By downloading, installing or using the Application you accept these Terms. If you do not accept them, you must not use the Application.",
+          "These Terms apply in addition to the Licensed Application End User License Agreement issued by Apple Inc., and, in the event of conflict on a matter it addresses, that agreement prevails."
+        ]
+      },
+      {
+        "title": "Eligibility",
+        "clauses": [
+          "You must be at least 13 years old to use the Application. By using the Application you represent that you meet this requirement. If you are under the age of majority in your jurisdiction, you should have a parent or guardian review these Terms with you."
+        ]
+      },
+      {
+        "title": "Nature of the Application",
+        "clauses": [
+          "The Application is an educational simulation provided for educational and entertainment purposes. All balances, orders, positions and transactions are simulated. No real money, securities or other assets are used, held, transferred or at risk. Educational simulation. Results are hypothetical.",
+          "The Application does not constitute a broker, dealer, exchange, investment adviser or financial institution, and it is not affiliated with any issuer, exchange or index provider whose name appears within it.",
+          "When the market is closed at weekends, the Application may offer a practice mode with a separate simulated portfolio. Practice results are not ranked and do not affect your main portfolio. Portfolios may be reset every six months."
+        ]
+      },
+      {
+        "title": "No Investment Advice",
+        "clauses": [
+          "Nothing in the Application, including prices, charts, statistics, lessons, glossary entries and model portfolios, constitutes investment, financial, legal or tax advice, or a recommendation or solicitation to buy or sell any security.",
+          "Trade Coach tips, including any rephrased on your device by Apple Intelligence, are generated automatically for educational purposes, may be inaccurate, and are not advice.",
+          "You must not rely on the Application or on results achieved within it when making any real investment decision. You should consult a licensed professional before doing so."
+        ]
+      },
+      {
+        "title": "Market Data and Hypothetical Performance",
+        "clauses": [
+          "Prices displayed in the Application replay historical market data as if it were happening now, for educational purposes. They are not live market quotations and do not show what a security is trading at today.",
+          "The historical market data comes from the HF Data Library under the Creative Commons Attribution 4.0 licence, and from IEX under the IEX Historical Data Terms of Use. These Terms place no further restrictions on that data. See Data Sources in the Help Center for credits and links.",
+          "Results in the Application are hypothetical. Simulated trading does not reflect the effects of real market conditions such as liquidity, slippage, commissions, taxes or the psychological effect of risking real capital. Past performance, whether real or simulated, does not guarantee future results."
+        ]
+      },
+      {
+        "title": "Licence",
+        "clauses": [
+          "Subject to these Terms, you are granted a limited, personal, non-exclusive, non-transferable and revocable licence to install and use the Application on devices that you own or control, for your own non-commercial purposes."
+        ]
+      },
+      {
+        "title": "Acceptable Use",
+        "clauses": [
+          "You must not copy, modify, decompile or reverse engineer the Application except to the extent that applicable law permits, interfere with the operation of the Application or of Game Center, tamper with saved data or the device clock, submit false leaderboard scores by artificial means, or use the Application for any unlawful purpose.",
+          "The developer may remove leaderboard entries that result from a breach of this article."
+        ]
+      },
+      {
+        "title": "Game Center",
+        "clauses": [
+          "The leaderboard is provided through Apple Game Center and ranks players by percentage return since their portfolio started or was last reset. It also shows five computer-run AI traders, which are simulated, labelled as AI and not real persons, and a rating tier that is a profile badge only. Your use of Game Center is governed by Apple's terms and privacy policy, and the developer is not responsible for the availability or operation of that service.",
+          "Each Game Center player may have one portfolio on the leaderboard. If you delete your account and data and start a new portfolio, its scores are held back from the global leaderboard until the 6-month reset date of your previous portfolio. The portfolio's start date and your rating are stored in the Game Center score's context to apply this rule."
+        ]
+      },
+      {
+        "title": "Your Data",
+        "clauses": [
+          "Your data is stored on your device as described in the Privacy Policy. If you sign in with Apple, a sealed backup of your portfolio is also stored in your private iCloud (CloudKit) database, which the developer cannot read. Settings > Delete Account & Data permanently deletes your data on the device and the iCloud copy, and cannot be undone. Scores already submitted to Game Center remain with Apple."
+        ]
+      },
+      {
+        "title": "Intellectual Property",
+        "clauses": [
+          "The Application, including its design, text, software and compiled data, is owned by the developer or its licensors and is protected by copyright and other laws. Company names, ticker symbols and marks that appear in the Application belong to their respective owners and are used for identification only.",
+          "The Application is not affiliated with, endorsed by, or sponsored by any of the companies whose names, ticker symbols or marks appear within it. Their use is solely nominative, to identify real, publicly-traded securities for the purpose of simulation, and does not imply any relationship with, or approval from, those companies.",
+          "Certain photographs in the Application are provided by Pexels (www.pexels.com) under the Pexels License and remain the property of their photographers. They are used for illustration only. The places, buildings or brands they show do not endorse, sponsor or have any connection with the Application, and you may not extract, redistribute or sell them separately from the Application."
+        ]
+      },
+      {
+        "title": "Disclaimer of Warranties",
+        "clauses": [
+          "To the fullest extent permitted by law, the Application is provided \"as is\" and \"as available\", without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, accuracy and non-infringement. The developer does not warrant that the Application will operate without interruption or error."
+        ]
+      },
+      {
+        "title": "Limitation of Liability",
+        "clauses": [
+          "To the fullest extent permitted by law, the developer shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of profits, data or goodwill, arising out of or in connection with your use of the Application.",
+          "Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law."
+        ]
+      },
+      {
+        "title": "Termination",
+        "clauses": [
+          "These Terms remain in effect until terminated. You may terminate them at any time by deleting the Application. The developer may terminate your licence if you breach these Terms, in which case you must cease all use of the Application."
+        ]
+      },
+      {
+        "title": "Changes to These Terms",
+        "clauses": [
+          "The developer may revise these Terms from time to time. The date of the most recent revision is stated at the head of this document. Continued use of the Application after a revision takes effect constitutes acceptance of the revised Terms."
+        ]
+      },
+      {
+        "title": "General Provisions",
+        "clauses": [
+          "If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions continue in full force. A failure to enforce a provision is not a waiver of it. These Terms, together with the Privacy Policy, constitute the entire agreement between you and the developer concerning the Application.",
+          "These Terms are governed by the laws of the jurisdiction in which the developer is established, without regard to its conflict of law rules, and subject to any mandatory consumer protection law of your country of residence."
+        ]
+      },
+      {
+        "title": "Contact",
+        "clauses": [
+          "Questions concerning these Terms may be sent to the support contact published on the Application's page in the App Store."
+        ]
+      }
+    ]
+  }
+}
