@@ -1,4 +1,4 @@
 :HL["/vestex-legal/_next/static/chunks/0g1lrh0899g4-.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"EX6WUu4dRxi3UE5hb7s-8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"snLKS7arnjlSvLYgxAA18","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
