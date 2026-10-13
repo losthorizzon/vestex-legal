@@ -31,6 +31,7 @@
         "clauses": [
           "Sign in with Apple is optional. When you use it, Apple provides the Application with your name and a user identifier. The Application stores them on your device (in local storage and the Keychain) to show your name and to recognise your account. It does not request your email address. Sign in with Apple is governed by Apple's privacy policy.",
           "When you are signed in, the Application backs up your saved portfolio data to your iCloud account. The backup is a sealed (encrypted) copy stored in your own private CloudKit database, which only you can access with your Apple ID. The developer cannot read it. It is stored and processed by Apple under Apple's privacy policy.",
+          "If you sign out, the Application first saves your latest portfolio to your iCloud backup and then removes it from the device; signing in again, on the same or another device, restores it. If you use the Application without signing in, your portfolio is stored only on your device and is lost if the Application is deleted.",
           "Delete Account & Data also removes this iCloud copy."
         ]
       },
@@ -182,7 +183,8 @@
       {
         "title": "Your Data",
         "clauses": [
-          "Your data is stored on your device as described in the Privacy Policy. If you sign in with Apple, a sealed backup of your portfolio is also stored in your private iCloud (CloudKit) database, which the developer cannot read. Settings > Delete Account & Data permanently deletes your data on the device and the iCloud copy, and cannot be undone. Scores already submitted to Game Center remain with Apple."
+          "Your data is stored on your device as described in the Privacy Policy. If you sign in with Apple, a sealed backup of your portfolio is also stored in your private iCloud (CloudKit) database, which the developer cannot read. Settings > Delete Account & Data permanently deletes your data on the device and the iCloud copy, and cannot be undone. Scores already submitted to Game Center remain with Apple.",
+          "Signing out saves your portfolio to your iCloud backup and removes it from the device, and signing in again restores it. Without an account, your portfolio exists only on your device."
         ]
       },
       {
